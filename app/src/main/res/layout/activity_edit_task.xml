@@ -5,11 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTaskActivity">
+    tools:context=".EditTaskActivity">
 
     <LinearLayout
         android:layout_width="409dp"
-        android:layout_height="430dp"
+        android:layout_height="460dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,11 +45,29 @@
             />
 
         <Button
+            android:id="@+id/DoneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="#00FF00"
+            android:text="Mark as done"
+             />
+
+        <Button
+            android:id="@+id/DeleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_button_border"
+            android:textColor="#FF0000"
+            android:text="Delete"
+            android:layout_marginTop="10dp" />
+
+        <Button
             android:id="@+id/AddTaskButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

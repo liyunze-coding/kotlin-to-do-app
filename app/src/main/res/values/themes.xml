@@ -3,6 +3,8 @@
     <style name="Base.Theme.ToDoApp2" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorSecondary">#00FF00</item>
+        <item name="colorError">#FF0000</item>
     </style>
 
     <style name="Theme.ToDoApp2" parent="Base.Theme.ToDoApp2" />
