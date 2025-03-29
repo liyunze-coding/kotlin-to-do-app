@@ -58,18 +58,20 @@ class MainActivity : AppCompatActivity() {
 
             if (tasks.isNotEmpty()) {
                 tasks.forEachIndexed { index, task ->
-                    var bgColor = Color.WHITE
+                    var bgResource = R.drawable.round_button
+                    var textColor = Color.BLACK
                     if (task.done) {
-                        bgColor = ContextCompat.getColor(this, R.color.green)
+                        bgResource = R.drawable.green_button_border
+                        textColor = Color.WHITE
                     }
 
                     val taskButton = Button(this).apply {
                         text = "• ${task.name}"  // Add bullet point
                         textSize = 18f
-                        setPadding(16, 16, 16, 16)
+                        setPadding(100, 16, 16, 16)
                         textAlignment = View.TEXT_ALIGNMENT_TEXT_START // Align text to start
-                        setBackgroundColor(bgColor) // Remove default button styling
-                        setTextColor(Color.BLACK) // Set text color
+                        setBackgroundResource(bgResource)
+                        setTextColor(textColor) // Set text color
                         isAllCaps = false // Prevent automatic capitalization
 
                         // Set click listener to open EditTaskActivity with task data
@@ -84,11 +86,22 @@ class MainActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                     }
+
+                    // Apply margin bottom (5dp)
+                    val layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT, // Width
+                        LinearLayout.LayoutParams.WRAP_CONTENT  // Height
+                    ).apply {
+                        setMargins(0, 0, 0, 5) // Left, Top, Right, Bottom margin
+                    }
+                    taskButton.layoutParams = layoutParams
+
                     tasksLayout.addView(taskButton)
                 }
             }
-        }
 
+
+        }
         // floating action button, redirect to add task activity
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         displayTasks()

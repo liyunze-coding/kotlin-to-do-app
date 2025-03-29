@@ -7,8 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".EditTaskActivity">
 
+
+
     <LinearLayout
-        android:layout_width="409dp"
+        android:layout_width="400dp"
         android:layout_height="460dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +68,7 @@
             android:id="@+id/AddTaskButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:text="Back to List"
             android:layout_marginTop="10dp" />
 
     </LinearLayout>
